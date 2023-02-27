@@ -1,0 +1,75 @@
+// 
+
+let span = document.getElementById("one");
+let span1 = document.getElementById("tow");
+let span2 = document.getElementById("three");
+
+
+span2.onclick = function (){
+    if(span1.className === ""){
+        span1.previousElementSibling.style.cssText = "color:blue;";
+        span1.style.cssText = "background-color:green";
+    }
+}
+span.onclick = function (){
+    if(span1.className === ""){
+        span1.nextElementSibling.style.cssText = "font-size:1.2rem;color:#000;border-radius:20px";
+        // span2.parentElement.remove();
+    }
+}
+
+
+
+
+
+const mydiv = document.createElement("header");
+const myHead = document.createElement("h3");
+const myDIVS = document.createElement("div");
+const myOl = document.createElement("ul");
+
+
+
+mydiv.className ="main";
+myOl.id ="Parent";
+const testLogo = document.createTextNode("Alisawi");
+
+
+
+
+const mynamen = ["Home","images", "servies","contact"];
+
+mynamen.forEach(e => {
+    let linkLI = document.createElement("li");
+    myOl.appendChild(linkLI);
+
+    const liste = document.createTextNode(e);
+    linkLI.appendChild(liste);
+   
+});
+
+
+
+
+
+
+myHead.appendChild(testLogo);
+myDIVS.appendChild(myHead);
+
+
+
+myDIVS.appendChild(myOl);
+
+
+document.body.style.cssText = "width:80%;margin:auto;";
+
+myOl.style.cssText = "display:flex;color:red;font-size:15px;gap:20px"
+myDIVS.style.cssText = "margin-top:3rem  ;display:flex;justify-content:space-between;align-items: center; background-color:#ccc;padding:0 2.2em;border-radius:0 2rem"
+
+
+
+mydiv.appendChild(myDIVS)
+
+
+
+
+document.body.appendChild(mydiv);
