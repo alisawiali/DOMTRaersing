@@ -73,3 +73,10 @@ mydiv.appendChild(myDIVS)
 
 
 document.body.appendChild(mydiv);
+
+
+///   
+// after und before außer den div arbeitet
+// append  ===> am ende setzt 
+// prepend  ==> am anfang setzt es 
+// remove ==> löscht den element absolute (statt  dispaly:none;);
