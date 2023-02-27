@@ -8,6 +8,10 @@ header {
 #omer {
   margin: 3rem; }
 
+#pasta {
+  display: flex;
+  margin: 0 auto; }
+
 #one {
   padding: 20px;
   margin: 10px;

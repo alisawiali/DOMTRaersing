@@ -1,33 +1,47 @@
 @import "./abstarct/color";
 
-header{
-    background-color: red;    
-    h3{
+
+
+
+header {
+    background-color: red;
+
+    h3 {
         text-transform: uppercase;
     }
-    ul{
+
+    ul {
         list-style-type: none;
     }
 }
-#omer{
+
+#omer {
     margin: 3rem;
 }
 
-#one{
+#pasta {
+    display: flex;
+    margin: 0 auto;
+
+}
+
+
+
+#one {
     padding: 20px;
     margin: 10px;
     background-color: red;
-    color:$color-withe;
+    color: $color-withe;
 }
 
-#tow{
+#tow {
     padding: 20px;
     margin: 10px;
     background-color: red;
     color: #ffff;
 }
 
-#three{
+#three {
     padding: 20px;
     margin: 10px;
     background-color: red;

@@ -72,13 +72,7 @@ document.body.style.cssText = "width:80%;margin:auto;";
 myOl.style.cssText = "display:flex;color:red;font-size:15px;gap:20px"
 myDIVS.style.cssText = "margin-top:3rem  ;display:flex;justify-content:space-between;align-items: center; background-color:#ccc;padding:0 2.2em;border-radius:0 2rem"
 
-
-
-mydiv.appendChild(myDIVS)
-
-
-
-
+mydiv.appendChild(myDIVS);
 document.body.appendChild(mydiv);
 
 
@@ -92,9 +86,44 @@ document.body.appendChild(mydiv);
 
 
 
-// ----------------cloning--------------------
+// ----------------cloning-- And  AddEventlistener------------------
 
-let omer = document.getElementById("omer").cloneNode(true);
+let omer = document.getElementById("omer");
 let dd = document.getElementById("dd");
 
-omer.appendChild(dd);
+omer.onclick = function (){
+    let myparent = omer.cloneNode(true);
+    document.body.appendChild(myparent);
+    omer.id = "Imad";
+    omer.textContent = "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur labore impedit provident officiis suscipit,     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur labore impedit provident officiis suscipit m accusantium accusamus nostrum laboriosam dolorum odio fugit deserunt totam facere! Cupiditate id odio ex?"
+    omer.style.cssText= "opacity:0.9; font-size: 0.8rem;word-break: break-all;overflow: scroll;;width:200px;height:120px; background-color:red; text-align: center;padding:1rem;border-radius:10px";
+}
+// addventlistener
+// traget ==> هدف  hier bestätig für zns die id || class
+omer.addEventListener("click", function (e){
+    if(e.target.id === "Imad"){
+        Iamd.textContent = "hallo welt "
+    }
+})
+
+dd.onclick = function (){
+    let maina = dd.cloneNode(true);
+    document.body.appendChild(maina);
+    dd.classList = "Alisawi";
+    dd.textContent = "Hallo mr. Alisawi in Berlin"
+}
+
+dd.addEventListener("click", function (e){
+    if(dd.className === "Alisawi"){
+        dd.style.cssText = "background-color:#000; color:#fff;";
+    }
+})
+
+
+// omer.addEventListener("click", function (){
+//     dd.style.cssText= "opacity:0.9; font-size: 0.8rem;word-break: break-all;overflow: scroll;;width:200px;height:120px; background-color:red; text-align: center;padding:1rem;border-radius:10px";
+//     dd.textContent = "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur labore impedit provident officiis suscipit,     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur labore impedit provident officiis suscipit m accusantium accusamus nostrum laboriosam dolorum odio fugit deserunt totam facere! Cupiditate id odio ex?"
+    
+// })
+// omer.addEventListener("click", one);
+// omer.addEventListener("click", tow);
