@@ -1,4 +1,14 @@
 // 
+//Dom [Traversing];
+// --- nextSibling 
+// --- previosSibling
+// --- nextElementSibling
+// -- previousElementSibling
+// -- parentElement
+
+
+
+
 
 let span = document.getElementById("one");
 let span1 = document.getElementById("tow");
@@ -7,8 +17,8 @@ let span2 = document.getElementById("three");
 
 span2.onclick = function (){
     if(span1.className === ""){
-        span1.previousElementSibling.style.cssText = "color:blue;";
-        span1.style.cssText = "background-color:green";
+        span1.previousElementSibling.textContent = "color:blue;";
+        span1.style.cssText = "background-color:green;opacity:0.2;border-radius:20px";
     }
 }
 span.onclick = function (){
@@ -18,9 +28,7 @@ span.onclick = function (){
     }
 }
 
-
-
-
+// -----------------------------header js------------------------//
 
 const mydiv = document.createElement("header");
 const myHead = document.createElement("h3");
@@ -46,7 +54,6 @@ mynamen.forEach(e => {
     linkLI.appendChild(liste);
    
 });
-
 
 
 
@@ -80,3 +87,14 @@ document.body.appendChild(mydiv);
 // append  ===> am ende setzt 
 // prepend  ==> am anfang setzt es 
 // remove ==> löscht den element absolute (statt  dispaly:none;);
+
+
+
+
+
+// ----------------cloning--------------------
+
+let omer = document.getElementById("omer").cloneNode(true);
+let dd = document.getElementById("dd");
+
+omer.appendChild(dd);

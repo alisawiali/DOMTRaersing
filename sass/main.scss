@@ -1,9 +1,23 @@
+@import "./abstarct/color";
+
+header{
+    background-color: red;    
+    h3{
+        text-transform: uppercase;
+    }
+    ul{
+        list-style-type: none;
+    }
+}
+#omer{
+    margin: 3rem;
+}
 
 #one{
     padding: 20px;
     margin: 10px;
     background-color: red;
-    color: #ffff;
+    color:$color-withe;
 }
 
 #tow{
